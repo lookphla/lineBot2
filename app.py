@@ -22,7 +22,12 @@ def callback():
     decoded = json.loads(json_line)
     user = decoded["events"][0]['replyToken']
     userText = decoded["events"][0]['message']['text']
-    sendText(user,userText)
+    if (p1 == 'สวัสดี') :
+        print('ดีด้วยจ้า')
+    elif (p1 == 'ดีด้วยจ้า') :
+        print('ยังไม่ตายค่ะ')
+    else :
+        print('ว่าอะไรคะ')
     return '',200
 
 def sendText(user, text):
